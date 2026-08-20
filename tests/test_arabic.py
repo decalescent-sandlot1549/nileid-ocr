@@ -7,6 +7,8 @@ one word into a different word.
 
 from __future__ import annotations
 
+import importlib.util
+
 import pytest
 
 from nileid.extraction.arabic import (
@@ -19,6 +21,11 @@ from nileid.extraction.arabic import (
     to_western_digits,
 )
 from nileid.extraction.lexicon import correct_text, suggest_correction
+
+requires_rapidfuzz = pytest.mark.skipif(
+    importlib.util.find_spec("rapidfuzz") is None,
+    reason="rapidfuzz is not installed; dictionary correction is unavailable",
+)
 
 
 class TestCharacterHelpers:
@@ -132,6 +139,7 @@ class TestLexiconCorrection:
     def test_returns_input_for_unknown_field_type(self):
         assert suggest_correction("محمد", "not_a_field") == "محمد"
 
+    @requires_rapidfuzz
     def test_corrects_a_near_miss_place_name(self):
         # One-character corruption of a place in the lexicon.
         assert suggest_correction("الزقازيف", "address", threshold=85) == "الزقازيق"
