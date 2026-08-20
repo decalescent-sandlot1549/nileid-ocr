@@ -401,5 +401,7 @@ convenience and are not authored here. NileID also builds on
 [PyTorch](https://pytorch.org/) (BSD-3-Clause). If you redistribute a
 derivative, check Ultralytics' AGPL terms against your use case.
 
+See [NOTICE](NOTICE) for the full third-party component list.
+
 This is an independent open-source project. It is not affiliated with,
 endorsed by, or connected to any Egyptian government body.

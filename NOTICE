@@ -1,0 +1,31 @@
+THIRD-PARTY COMPONENTS
+======================
+
+The MIT licence in LICENSE covers the source code in this repository only.
+
+MODEL WEIGHTS
+-------------
+
+The YOLO model weights distributed as release assets (detect_id_card.pt,
+detect_odjects.pt, detect_id.pt, best.pt) are third-party artefacts. They
+were not authored as part of this project and are redistributed for
+convenience only; the MIT licence does not grant rights to them.
+
+DEPENDENCIES
+------------
+
+The project depends on, and is not a derivative of:
+
+  - Ultralytics YOLO   AGPL-3.0     https://github.com/ultralytics/ultralytics
+  - EasyOCR            Apache-2.0   https://github.com/JaidedAI/EasyOCR
+  - OpenCV             Apache-2.0   https://opencv.org/
+  - PyTorch            BSD-3-Clause https://pytorch.org/
+  - Pillow             MIT-CMU      https://python-pillow.org/
+  - NumPy              BSD-3-Clause https://numpy.org/
+  - RapidFuzz          MIT          https://github.com/rapidfuzz/RapidFuzz
+  - arabic-reshaper    MIT          https://github.com/mpcabd/python-arabic-reshaper
+  - python-bidi        LGPL-3.0     https://github.com/MeirKriheli/python-bidi
+
+Ultralytics YOLO is licensed under AGPL-3.0. If you distribute a derivative
+work or offer it as a network service, review those terms against your
+intended use.
