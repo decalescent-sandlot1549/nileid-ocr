@@ -11,7 +11,13 @@ import io
 import pytest
 
 fastapi = pytest.importorskip("fastapi")
-from fastapi.testclient import TestClient  # noqa: E402
+
+# starlette.testclient raises at import time when no HTTP client backend is
+# installed. Skip the module rather than failing collection for the suite.
+try:
+    from fastapi.testclient import TestClient
+except (ImportError, RuntimeError) as exc:  # pragma: no cover - environment dependent
+    pytest.skip(f"fastapi TestClient unavailable: {exc}", allow_module_level=True)
 
 from nileid.api.app import create_app  # noqa: E402
 from nileid.config import Settings  # noqa: E402
