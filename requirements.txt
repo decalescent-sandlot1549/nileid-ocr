@@ -1,0 +1,38 @@
+# Runtime dependencies for NileID.
+#
+# This mirrors the [project].dependencies table in pyproject.toml and exists
+# for deployment targets that expect a requirements file (Docker images,
+# hosted Spaces). For development, prefer:  pip install -e ".[dev,api,demo]"
+#
+# On a CPU-only host, install the CPU build of PyTorch first:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+# ── Core computer vision ─────────────────────────────────────────────
+numpy>=1.24
+opencv-python-headless>=4.8
+Pillow>=10.0
+
+# ── Detection ────────────────────────────────────────────────────────
+torch>=2.0
+torchvision>=0.15
+ultralytics>=8.1
+
+# ── OCR ──────────────────────────────────────────────────────────────
+easyocr>=1.7
+
+# ── Arabic text processing ───────────────────────────────────────────
+# rapidfuzz powers the optional dictionary-assisted correction;
+# arabic-reshaper and python-bidi are used by to_display_form() and by the
+# synthetic sample generator to render Arabic with Pillow.
+rapidfuzz>=3.0
+arabic-reshaper>=3.0
+python-bidi>=0.4.2
+
+# ── Support ──────────────────────────────────────────────────────────
+pyyaml>=6.0
+requests>=2.31
+
+# ── HTTP API (optional: pip install -e ".[api]") ─────────────────────
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9

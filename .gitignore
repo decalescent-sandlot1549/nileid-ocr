@@ -1,0 +1,78 @@
+# ── Python ───────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.installed.cfg
+
+# ── Virtual environments ─────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Tooling caches ───────────────────────────────────────────────────
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+
+# ── Editors / OS ─────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Secrets & local configuration ────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.yaml
+
+# ── Model weights (fetched via scripts/download_models.py) ───────────
+*.pt
+*.pth
+*.onnx
+*.engine
+models/
+
+# ══════════════════════════════════════════════════════════════════════
+# PRIVACY — identity documents must never enter version control.
+# See docs/PRIVACY.md. These rules are deliberately broad.
+# ══════════════════════════════════════════════════════════════════════
+uploads/
+inputs/
+outputs/
+tmp/
+temp/
+scratch/
+data/
+samples/
+debug/
+*_output.json
+*_result.json
+extracted/
+
+# Real card images. Synthetic assets live in examples/ and assets/,
+# which are re-included explicitly below.
+*.heic
+*.HEIC
+!examples/**
+!assets/**
+!tests/fixtures/**
+
+# Local Streamlit secrets
+.streamlit/secrets.toml

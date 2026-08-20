@@ -1,0 +1,41 @@
+# Reference configuration.
+#
+# These are the defaults compiled into nileid.config.Settings, written out
+# for reference. Override them with environment variables (see .env.example)
+# or by constructing Settings(...) directly:
+#
+#     from nileid import EgyptianIDReader, Settings
+#     reader = EgyptianIDReader(Settings(device="cpu", card_conf=0.35))
+
+paths:
+  model_dir: models          # NILEID_MODEL_DIR
+
+runtime:
+  device: auto               # NILEID_DEVICE: auto | cpu | cuda | cuda:0
+  log_level: INFO            # NILEID_LOG_LEVEL
+
+detection:
+  card_conf: 0.25            # accept a card detection above this
+  card_conf_warn: 0.45       # warn below this
+  field_conf: 0.20           # accept a field region above this
+  digit_conf: 0.25           # accept a National ID digit above this
+  digit_iou: 0.40            # class-agnostic NMS threshold for digits
+  min_card_height: 120       # reject card crops smaller than this
+  min_card_width: 200
+
+ocr:
+  engines: [easyocr]         # NILEID_OCR_ENGINES; add paddleocr if installed
+  languages: [ar, en]
+  low_confidence: 0.40       # below this a field is flagged uncertain
+
+arabic:
+  enable_fuzzy_correction: false  # dictionary-assisted correction (a guess)
+  fuzzy_threshold: 92             # similarity required before substituting
+
+api:
+  max_upload_mb: 10          # NILEID_MAX_UPLOAD_MB
+
+card:
+  # ID-1 format (85.6 x 54 mm); the canonical size fields are detected at.
+  width: 1000
+  height: 630
