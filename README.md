@@ -193,7 +193,7 @@ uvicorn nileid.api.app:app --port 8000
 curl -F "file=@card.jpg" http://localhost:8000/v1/extract
 ```
 
-Interactive documentation is served at `//docs`. Uploads are processed in
+Interactive OpenAPI documentation is served at `http://localhost:8000/docs`. Uploads are processed in
 memory, capped at 10 MB, and never written to disk.
 
 ### Demo
