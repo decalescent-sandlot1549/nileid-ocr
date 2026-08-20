@@ -23,10 +23,10 @@ BASE_URL = f"https://github.com/{REPO}/releases/download/{RELEASE_TAG}"
 
 # filename -> (approximate size in MB, sha256 of the released asset)
 MODELS: dict[str, tuple[int, str]] = {
-    "detect_id_card.pt": (6, ""),
-    "detect_odjects.pt": (6, ""),
-    "detect_id.pt": (22, ""),
-    "best.pt": (50, ""),
+    "detect_id_card.pt": (6, "401540620a3c94d1cc7c348c4b0fa26b11fb358da9333f5215919fa8bf10a1dd"),
+    "detect_odjects.pt": (6, "55ed6539977bc14bf0f4a3f06c56b23fa2b79339b0a8629e41de3f502b256295"),
+    "detect_id.pt": (22, "ab65f044b5bd5b3c894b8e8c32e30d0737e89d6e2dfddbee5b007e10098a8116"),
+    "best.pt": (50, "7254bc093ce44ed2fa5a749f4952bb7b44deaef9166f938560a005647cbe4930"),
 }
 
 
